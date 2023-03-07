@@ -6,7 +6,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <h1 className="text-3xl font-bold">
-        Home!
+        Project!
       </h1>
     </Layout>
   )
@@ -14,4 +14,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home</title>
+export const Head: HeadFC = () => <title>Project</title>

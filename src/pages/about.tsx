@@ -2,16 +2,16 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Layout from '../components/layout'
 
-const IndexPage: React.FC<PageProps> = () => {
+const AboutPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <h1 className="text-3xl font-bold">
-        Home!
+        About!
       </h1>
     </Layout>
   )
 }
 
-export default IndexPage
+export default AboutPage
 
-export const Head: HeadFC = () => <title>Home</title>
+export const Head: HeadFC = () => <title>About</title>
