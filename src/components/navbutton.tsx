@@ -10,7 +10,7 @@ interface NavButtonProps {
 const NavButton: React.FC<NavButtonProps> = ({ to, children }) => {
   return (
     <Link
-      to="/about"
+      to={to}
       className="px-2 rounded-md cursor-pointer font-poppins bg-white text-gray-lite font-medium mx-2.5 flex 
                   text-xtiny py-2.5 md:px-4 xl:px-5 items-center transition-all duration-300 ease-in-out 
                   dark:hover:text-white dark:bg-[#212425] hover:text-white 

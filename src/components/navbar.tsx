@@ -3,7 +3,12 @@ import React from "react";
 
 import { Link } from "gatsby";
 import NavButton from "./navbutton";
-import brandLogo from "../../public/static/logo.png";
+import brandLogo from "../images/logo.png";
+import { AiOutlineUser } from "react-icons/ai";
+import { BsFileText } from "react-icons/bs";
+import { SlWrench } from "react-icons/sl";
+import { RiContactsBookLine } from "react-icons/ri";
+import { TbSunMoon } from "react-icons/tb";
 
 const Navbar: React.FC = () => {
   return (
@@ -14,7 +19,7 @@ const Navbar: React.FC = () => {
             <Link to="/">
               <img
                 src={brandLogo}
-                className="h-[56px] lg:h-[64px]"
+                className="h-[36px] lg:h-[48px]"
                 alt="logo"
               ></img>
             </Link>
@@ -25,16 +30,28 @@ const Navbar: React.FC = () => {
         <nav className="hidden lg:block">
           <ul className="flex my-12">
             <li className="mb-1">
-              <NavButton to="/about">About</NavButton>
+              <NavButton to="/about">
+                <AiOutlineUser className="mr-2" />
+                About
+              </NavButton>
             </li>
             <li>
-              <NavButton to="/resume">Resume</NavButton>
+              <NavButton to="/resume">
+                <BsFileText className="mr-2" />
+                Resume
+              </NavButton>
             </li>
             <li>
-              <NavButton to="/works">Works</NavButton>
+              <NavButton to="/works">
+                <SlWrench className="mr-2" />
+                Works
+              </NavButton>
             </li>
             <li>
-              <NavButton to="/contacts">Contacts</NavButton>
+              <NavButton to="/contacts">
+                <RiContactsBookLine className="mr-2" />
+                Contacts
+              </NavButton>
             </li>
             <span
               className="bg-white w-[40px] 
@@ -46,7 +63,9 @@ const Navbar: React.FC = () => {
             text-black 
             hover:bg-[#ef4060]
             transition-all duration-300 ease-in-out cursor-pointer ml-2 "
-            ></span>
+            >
+              <TbSunMoon />
+            </span>
           </ul>
         </nav>
       </header>
