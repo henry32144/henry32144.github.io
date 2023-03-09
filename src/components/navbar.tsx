@@ -17,11 +17,14 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between w-full px-4 lg:px-0">
           <div className="flex justify-between items-center space-x-4 lg-my-8 my-5">
             <Link to="/">
-              <img
+              <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-violet-500 text-4xl font-bold">
+                CHENG-HAN
+              </h1>
+              {/* <img
                 src={brandLogo}
                 className="h-[36px] lg:h-[48px]"
                 alt="logo"
-              ></img>
+              ></img> */}
             </Link>
           </div>
           {/* Mobile nav menu*/}
@@ -61,7 +64,7 @@ const Navbar: React.FC = () => {
             justify-center 
             items-center 
             text-black 
-            hover:bg-[#ef4060]
+            hover:bg-indigo-500
             transition-all duration-300 ease-in-out cursor-pointer ml-2 "
             >
               <TbSunMoon />
