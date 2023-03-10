@@ -11,6 +11,30 @@ import { RiContactsBookLine } from "react-icons/ri";
 import { TbSunMoon } from "react-icons/tb";
 
 const Navbar: React.FC = () => {
+  const [isDark, setIsDark] = React.useState(false);
+
+  React.useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setIsDark(true);
+    } else {
+      setIsDark(false);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    }
+  }, [isDark]);
+
   return (
     <div className="container">
       <header className="flex justify-between items-center fixed lg:static">
@@ -77,7 +101,8 @@ const Navbar: React.FC = () => {
             items-center 
             text-black 
             hover:bg-indigo-500
-            transition-all duration-300 ease-in-out cursor-pointer ml-2 "
+            transition-all duration-300 ease-in-out cursor-pointer ml-2"
+              onClick={() => setIsDark(!isDark)}
             >
               <TbSunMoon />
             </span>

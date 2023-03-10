@@ -8,7 +8,12 @@ interface NavButtonProps {
 
 const Card: React.FC<NavButtonProps> = ({ className, children }) => {
   return (
-    <div className={classNames("min-h-[50vh] rounded-2xl bg-white", className)}>
+    <div
+      className={classNames(
+        "container lg:rounded-2xl bg-white dark:bg-[#111111] px-4 sm:px-5 md:px-10 lg:px-20",
+        className
+      )}
+    >
       {children}
     </div>
   );
