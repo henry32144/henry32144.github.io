@@ -2,7 +2,7 @@
 import React from "react";
 
 import { Link } from "gatsby";
-import NavButton from "./navbutton";
+import LinkButton from "./linkButton";
 import brandLogo from "../images/logo.png";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsFileText } from "react-icons/bs";
@@ -33,33 +33,45 @@ const Navbar: React.FC = () => {
         <nav className="hidden lg:block">
           <ul className="flex my-12">
             <li className="mb-1">
-              <NavButton to="/about">
+              <LinkButton
+                to="/about"
+                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+              >
                 <AiOutlineUser className="mr-2" />
                 About
-              </NavButton>
+              </LinkButton>
             </li>
             <li>
-              <NavButton to="/resume">
+              <LinkButton
+                to="/resume"
+                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+              >
                 <BsFileText className="mr-2" />
                 Resume
-              </NavButton>
+              </LinkButton>
             </li>
             <li>
-              <NavButton to="/works">
+              <LinkButton
+                to="/works"
+                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+              >
                 <SlWrench className="mr-2" />
                 Works
-              </NavButton>
+              </LinkButton>
             </li>
             <li>
-              <NavButton to="/contacts">
+              <LinkButton
+                to="/contacts"
+                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+              >
                 <RiContactsBookLine className="mr-2" />
-                Contacts
-              </NavButton>
+                Contact
+              </LinkButton>
             </li>
             <span
-              className="bg-white w-[40px] 
+              className="bg-white w-[44px] h-[44px] 
             hover:text-white 
-            hidden h-[40px] 
+            hidden
             rounded-full lg:flex 
             justify-center 
             items-center 
