@@ -7,7 +7,7 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="bg-bgImage bg-cover bg-fixed bg-center bg-no-repeat min-h-screen">
+    <div className="bg-bgImage dark:bg-darkBgImage bg-cover bg-fixed bg-center bg-no-repeat min-h-screen">
       <Navbar />
       <main>
         <div className="container">{children}</div>
