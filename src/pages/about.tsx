@@ -6,7 +6,12 @@ import PersonalInfoCard from "../components/personalInfoCard";
 import WhatIDoCard from "../components/whatIDoCard";
 import tempImage from "../images/background.jpg";
 import { MdEmail, MdLocationPin, MdWeb } from "react-icons/md";
-import { AiFillLinkedin, AiFillCalendar, AiFillRobot, AiFillCloud } from "react-icons/ai";
+import {
+  AiFillLinkedin,
+  AiFillCalendar,
+  AiFillRobot,
+  AiFillCloud,
+} from "react-icons/ai";
 import { FaServer } from "react-icons/fa";
 
 const AboutPage: React.FC<PageProps> = () => {
@@ -128,7 +133,7 @@ const AboutPage: React.FC<PageProps> = () => {
                 />
               }
               title="Frontend Development"
-              description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
+              description="Using tools like React.js, HTML, CSS, and JavaScript, I have the skills to create responsive and dynamic websites that are optimized for desktop and mobile devices."
               bgColor="bg-orange-50"
             />
             <WhatIDoCard
@@ -139,7 +144,7 @@ const AboutPage: React.FC<PageProps> = () => {
                 />
               }
               title="Backend Development"
-              description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
+              description="Using languages like Python, Node.js, and Go, I can build RESTful APIs, database schemas, and server-side logic to power web apps."
               bgColor="bg-yellow-50"
             />
             <WhatIDoCard
@@ -150,7 +155,7 @@ const AboutPage: React.FC<PageProps> = () => {
                 />
               }
               title="Cloud Application"
-              description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
+              description="With experience in platforms like AWS, Azure, and Google Cloud, I can create architectures that leverage the power of cloud computing and containerization to deliver fast and efficient services."
               bgColor="bg-green-50"
             />
             <WhatIDoCard
@@ -161,7 +166,7 @@ const AboutPage: React.FC<PageProps> = () => {
                 />
               }
               title="ML/AI Application"
-              description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
+              description="I can build intelligent systems that can automate tasks, make predictions, and gain insights from data leverage the power of machine learning and artificial intelligence."
               bgColor="bg-sky-50"
             />
           </div>
