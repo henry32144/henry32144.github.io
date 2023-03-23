@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import Card from "../components/card";
 import PersonalInfoCard from "../components/personalInfoCard";
 import WhatIDoCard from "../components/whatIDoCard";
+import PageTitle from "../components/pageTitle";
 import tempImage from "../images/background.jpg";
 import { MdEmail, MdLocationPin, MdWeb } from "react-icons/md";
 import {
@@ -19,13 +20,7 @@ const AboutPage: React.FC<PageProps> = () => {
     <Layout>
       <Card>
         <div className="py-12">
-          <h2
-            className="dark:text-white relative inline-block text-4xl font-bold after:content-[''] after:left-48 after:w-[13rem] after:h-0.5 \
-            after:absolute after:top-[50%] after:rounded-md after:bg-gradient-to-r after:from-indigo-500 after:to-violet-500 \
-            "
-          >
-            About Me
-          </h2>
+          <PageTitle text="About Me" />
           <div className="grid grid-cols-12 md:gap-10 pt-4 md:pt-[40px] items-center">
             <div className="col-span-12 md:col-span-4">
               <img
