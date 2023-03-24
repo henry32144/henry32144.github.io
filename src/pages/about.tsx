@@ -119,7 +119,7 @@ const AboutPage: React.FC<PageProps> = () => {
           <h3 className="dark:text-white relative inline-block text-3xl font-semibold pb-5">
             What I do
           </h3>
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 ">
+          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2">
             <WhatIDoCard
               icon={
                 <MdWeb

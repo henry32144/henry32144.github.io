@@ -24,7 +24,7 @@ const WhatIDoCard: React.FC<WhatIDoCardProps> = ({
       )}
     >
       {icon}
-      <div className="space-y-2 break-all">
+      <div className="space-y-2 break-words">
         <h3 className="dark:text-white text-xl font-semibold">{title}</h3>
         <p className="leading-8 text-gray-500 dark:text-gray-400">
           {description}
