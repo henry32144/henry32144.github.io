@@ -31,7 +31,7 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-blue-200">
+                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-blue-50">
                     <div className="flex flex-col flex-1">
                       <span className="text-sm text-gray-500 mb-1">
                         2021 Sep - 2022 Dec
@@ -83,8 +83,7 @@ const ResumePage: React.FC<PageProps> = () => {
                         2018 - 2019
                       </span>
                       <span className="text-xl font-semibold">
-                        Deep Reinforcement Learning Nanodegree <br></br>
-                        Machine Learning Engineer Nanodegree
+                        Deep Reinforcement Learning Nanodegree
                       </span>
                       <span className="text-base">
                         Udacity (Online Learning)
@@ -104,7 +103,7 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-orange-200">
+                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-orange-50">
                     <div className="flex flex-col flex-1">
                       <span className="text-sm text-gray-500 mb-1">
                         2022 Jun - 2022 Dec, 7 months
@@ -169,13 +168,13 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-200">
+                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
                     <div className="flex flex-col flex-1">
                       <span className="text-sm text-gray-500 mb-1">
                         2020 Aug
                       </span>
                       <span className="text-xl font-semibold">
-                        MVP launch competition (1st Place)
+                        1st Place, MVP launch competition
                       </span>
                       <span className="text-base">Cinnamon AI</span>
                     </div>
@@ -186,8 +185,7 @@ const ResumePage: React.FC<PageProps> = () => {
                         2019 Mar
                       </span>
                       <span className="text-xl font-semibold">
-                        2018 Artificial Intelligence Cup Award (Honorable
-                        Mention)
+                        Honorable Mention, Artificial Intelligence Cup Award
                       </span>
                       <span className="text-base">
                         Ministry of Education, Taiwan
@@ -198,7 +196,7 @@ const ResumePage: React.FC<PageProps> = () => {
                     <div className="flex flex-col flex-1">
                       <span className="text-sm text-gray-500 mb-1">2019</span>
                       <span className="text-xl font-semibold">
-                        Graduation Thematic Competition (Honorable Mention)
+                        Honorable Mention, Graduation Thematic Competition
                       </span>
                       <span className="text-base">Tunghai University</span>
                     </div>
@@ -207,7 +205,7 @@ const ResumePage: React.FC<PageProps> = () => {
                     <div className="flex flex-col flex-1">
                       <span className="text-sm text-gray-500 mb-1">2018</span>
                       <span className="text-xl font-semibold">
-                        Academic Achievement Award (2nd Place)
+                        2nd Place, Academic Achievement Award
                       </span>
                       <span className="text-base">Tunghai University</span>
                     </div>
@@ -222,47 +220,53 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-200">
+                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
                     <div className="flex flex-col flex-1">
                       <span className="text-sm text-gray-500 mb-1">
-                        2020 Aug
+                        2022 Dec
                       </span>
                       <span className="text-xl font-semibold">
-                        MVP launch competition (1st Place)
+                        AWS Certified Cloud Practitioner
                       </span>
-                      <span className="text-base">Cinnamon AI</span>
+                      <span className="text-base">Amazon Web Services</span>
                     </div>
                   </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
+                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
                     <div className="flex flex-col flex-1">
                       <span className="text-sm text-gray-500 mb-1">
-                        2019 Mar
+                        2021 Jan
                       </span>
                       <span className="text-xl font-semibold">
-                        2018 Artificial Intelligence Cup Award (Honorable
-                        Mention)
+                        Japanese Language Proficiency Test N1
                       </span>
                       <span className="text-base">
-                        Ministry of Education, Taiwan
+                        Japan Foundation and Japan Educational Exchanges and
+                        Services
                       </span>
                     </div>
                   </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
+                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
                     <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">2019</span>
-                      <span className="text-xl font-semibold">
-                        Graduation Thematic Competition (Honorable Mention)
+                      <span className="text-sm text-gray-500 mb-1">
+                        2019 Oct
                       </span>
-                      <span className="text-base">Tunghai University</span>
+                      <span className="text-xl font-semibold">
+                        TOEFL iBT 106
+                      </span>
+                      <span className="text-base">
+                        ETS
+                      </span>
                     </div>
                   </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
+                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
                     <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">2018</span>
-                      <span className="text-xl font-semibold">
-                        Academic Achievement Award (2nd Place)
+                      <span className="text-sm text-gray-500 mb-1">
+                        2019 Aug
                       </span>
-                      <span className="text-base">Tunghai University</span>
+                      <span className="text-xl font-semibold">GRE 326</span>
+                      <span className="text-base">
+                        ETS
+                      </span>
                     </div>
                   </div>
                 </div>
