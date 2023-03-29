@@ -3,8 +3,10 @@ import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 import Card from "../components/card";
 import PageTitle from "../components/pageTitle";
+import Experience from "../components/experience";
 import { GiGraduateCap, GiBriefcase } from "react-icons/gi";
 import { FaAward, FaCertificate } from "react-icons/fa";
+
 import uciLogo from "../images/uci-logo.png";
 import thuLogo from "../images/thu-logo.png";
 import courseraLogo from "../images/coursera-logo.png";
@@ -31,68 +33,34 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-blue-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2021 Sep - 2022 Dec
-                      </span>
-                      <span className="text-xl font-semibold">
-                        Master of Computer Science{" "}
-                      </span>
-                      <span className="text-base">
-                        University of California Irvine, USA
-                      </span>
-                    </div>
-                    <div className="ml-auto md:flex flex-col flex-grow-0 items-center justify-center hidden dark:hidden">
-                      <img className="h-[80px]" src={uciLogo} />
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-blue-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2015 Sep - 2019 Jun
-                      </span>
-                      <span className="text-xl font-semibold">
-                        B.E. in Computer Science{" "}
-                      </span>
-                      <span className="text-base">
-                        TungHai University, Taiwan
-                      </span>
-                    </div>
-                    <div className="ml-auto md:flex flex-col flex-grow-0 items-center justify-center hidden dark:hidden">
-                      <img className="h-[80px]" src={thuLogo} />
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-blue-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">2019</span>
-                      <span className="text-xl font-semibold">
-                        Deep Learning Specialization
-                      </span>
-                      <span className="text-base">
-                        deeplearning.ai, Coursera (Online Learning)
-                      </span>
-                    </div>
-                    <div className="ml-auto md:flex flex-col flex-grow-0 items-center justify-center hidden dark:hidden">
-                      <img className="h-[80px]" src={courseraLogo} />
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-blue-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2018 - 2019
-                      </span>
-                      <span className="text-xl font-semibold">
-                        Deep Reinforcement Learning Nanodegree
-                      </span>
-                      <span className="text-base">
-                        Udacity (Online Learning)
-                      </span>
-                    </div>
-                    <div className="ml-auto md:flex flex-col flex-grow-0 items-center justify-center hidden dark:hidden">
-                      <img className="h-[80px]" src={udacityLogo} />
-                    </div>
-                  </div>
+                  <Experience
+                    title="Master of Computer Science"
+                    date="2021 Sep - 2022 Dec"
+                    institution="University of California Irvine, USA"
+                    logo={uciLogo}
+                    bgColor="bg-blue-50"
+                  />
+                  <Experience
+                    title="B.E. in Computer Science"
+                    date="2015 Sep - 2019 Jun"
+                    institution="Tunghai University, Taiwan"
+                    logo={thuLogo}
+                    bgColor="bg-blue-50"
+                  />
+                  <Experience
+                    title="Deep Learning Specialization"
+                    date="2019 Jun"
+                    institution="deeplearning.ai, Coursera (Online Learning)"
+                    logo={courseraLogo}
+                    bgColor="bg-blue-50"
+                  />
+                  <Experience
+                    title="Deep Reinforcement Learning Nanodegree"
+                    date="2019 May"
+                    institution="Udacity (Online Learning)"
+                    logo={udacityLogo}
+                    bgColor="bg-blue-50"
+                  />
                 </div>
               </div>
               <div className="col-span-12 md:col-span-6">
@@ -103,61 +71,33 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-orange-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2022 Jun - 2022 Dec, 7 months
-                      </span>
-                      <span className="text-xl font-semibold">
-                        Software Engineering Intern
-                      </span>
-                      <span className="text-base">MyCareLinq Inc, USA</span>
-                    </div>
-                    <div className="ml-auto md:flex flex-col flex-grow-0 items-center justify-center hidden dark:hidden">
-                      <img className="h-[80px]" src={MCLLogo} />
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-orange-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2020 Oct - 2021 Mar, 6 months
-                      </span>
-                      <span className="text-xl font-semibold">
-                        Frontend Engineering Intern
-                      </span>
-                      <span className="text-base">Memopresso Inc, Taiwan</span>
-                    </div>
-                    <div className="ml-auto md:flex flex-col flex-grow-0 items-center justify-center hidden dark:hidden">
-                      <img className="h-[80px]" src={MemopressoLogo} />
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-orange-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2020 Jul - 2020 Aug, 2 months
-                      </span>
-                      <span className="text-xl font-semibold">
-                        AI BootCamp Participant
-                      </span>
-                      <span className="text-base">Cinnamon AI, Taiwan</span>
-                    </div>
-                    <div className="ml-auto md:flex flex-col flex-grow-0 items-center justify-center hidden dark:hidden">
-                      <img className="h-[80px]" src={CinnamonAILogo} />
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-orange-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2018 Nov - 2019 Feb, 4 months
-                      </span>
-                      <span className="text-xl font-semibold">
-                        Freelance Software Engineer
-                      </span>
-                      <span className="text-base">
-                        Fullway communication ltd, Taiwan
-                      </span>
-                    </div>
-                  </div>
+                  <Experience
+                    title="Software Engineering Intern"
+                    date="2022 Jun - 2022 Dec, 7 months"
+                    institution="MyCareLinq Inc, USA"
+                    logo={MCLLogo}
+                    bgColor="bg-orange-50"
+                  />
+                  <Experience
+                    title="Frontend Engineering Intern"
+                    date="2020 Oct - 2021 Mar, 6 months"
+                    institution="Memopresso Inc, Taiwan"
+                    logo={MemopressoLogo}
+                    bgColor="bg-orange-50"
+                  />
+                  <Experience
+                    title="AI BootCamp Participant"
+                    date="2020 Jul - 2020 Aug, 2 months"
+                    institution="Cinnamon AI, Taiwan"
+                    logo={CinnamonAILogo}
+                    bgColor="bg-orange-50"
+                  />
+                  <Experience
+                    title="Freelance Software Engineer"
+                    date="2018 Nov - 2019 Feb, 4 months"
+                    institution="Fullway communication ltd, Taiwan"
+                    bgColor="bg-orange-50"
+                  />
                 </div>
               </div>
               <div className="col-span-12 md:col-span-6">
@@ -168,48 +108,30 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2020 Aug
-                      </span>
-                      <span className="text-xl font-semibold">
-                        1st Place, MVP launch competition
-                      </span>
-                      <span className="text-base">Cinnamon AI</span>
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2019 Mar
-                      </span>
-                      <span className="text-xl font-semibold">
-                        Honorable Mention, Artificial Intelligence Cup Award
-                      </span>
-                      <span className="text-base">
-                        Ministry of Education, Taiwan
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">2019</span>
-                      <span className="text-xl font-semibold">
-                        Honorable Mention, Graduation Thematic Competition
-                      </span>
-                      <span className="text-base">Tunghai University</span>
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-amber-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">2018</span>
-                      <span className="text-xl font-semibold">
-                        2nd Place, Academic Achievement Award
-                      </span>
-                      <span className="text-base">Tunghai University</span>
-                    </div>
-                  </div>
+                  <Experience
+                    title="1st Place, MVP launch competition"
+                    date="2020 Aug"
+                    institution="Cinnamon AI"
+                    bgColor="bg-amber-50"
+                  />
+                  <Experience
+                    title="Honorable Mention, Artificial Intelligence Cup Award"
+                    date="2019 Mar"
+                    institution="Ministry of Education, Taiwan"
+                    bgColor="bg-amber-50"
+                  />
+                  <Experience
+                    title="Honorable Mention, Graduation Thematic Competition"
+                    date="2019 Mar"
+                    institution="Tunghai University"
+                    bgColor="bg-amber-50"
+                  />
+                  <Experience
+                    title="2nd Place, Academic Achievement Award"
+                    date="2018 Jun"
+                    institution="Tunghai University"
+                    bgColor="bg-amber-50"
+                  />
                 </div>
               </div>
               <div className="col-span-12 md:col-span-6">
@@ -220,55 +142,31 @@ const ResumePage: React.FC<PageProps> = () => {
                   </span>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2022 Dec
-                      </span>
-                      <span className="text-xl font-semibold">
-                        AWS Certified Cloud Practitioner
-                      </span>
-                      <span className="text-base">Amazon Web Services</span>
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2021 Jan
-                      </span>
-                      <span className="text-xl font-semibold">
-                        Japanese Language Proficiency Test N1
-                      </span>
-                      <span className="text-base">
-                        Japan Foundation and Japan Educational Exchanges and
-                        Services
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2019 Oct
-                      </span>
-                      <span className="text-xl font-semibold">
-                        TOEFL iBT 106
-                      </span>
-                      <span className="text-base">
-                        ETS
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex rounded-xl p-6 dark:border-dark-icon-bg dark:border-2 dark:text-white dark:bg-transparent bg-emerald-50">
-                    <div className="flex flex-col flex-1">
-                      <span className="text-sm text-gray-500 mb-1">
-                        2019 Aug
-                      </span>
-                      <span className="text-xl font-semibold">GRE 326</span>
-                      <span className="text-base">
-                        ETS
-                      </span>
-                    </div>
-                  </div>
+                  <Experience
+                    title="AWS Certified Cloud Practitioner"
+                    date="2022 Dec"
+                    institution="Amazon Web Services"
+                    bgColor="bg-emerald-50"
+                  />
+                  <Experience
+                    title="Japanese Language Proficiency Test N1"
+                    date="2021 Jan"
+                    institution="Japan Foundation and Japan Educational Exchanges and
+                    Services"
+                    bgColor="bg-emerald-50"
+                  />
+                  <Experience
+                    title="TOEFL iBT 106"
+                    date="2019 Oct"
+                    institution="ETS"
+                    bgColor="bg-emerald-50"
+                  />
+                  <Experience
+                    title="GRE 326"
+                    date="2019 Aug"
+                    institution="ETS"
+                    bgColor="bg-emerald-50"
+                  />
                 </div>
               </div>
             </div>
