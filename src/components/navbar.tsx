@@ -6,7 +6,7 @@ import LinkButton from "./linkButton";
 import brandLogo from "../images/logo.png";
 import { AiOutlineUser } from "react-icons/ai";
 import { BsFileText } from "react-icons/bs";
-import { SlWrench } from "react-icons/sl";
+import { MdOutlineGridView } from "react-icons/md";
 import { RiContactsBookLine } from "react-icons/ri";
 import { TbSunMoon } from "react-icons/tb";
 
@@ -76,11 +76,11 @@ const Navbar: React.FC = () => {
             </li>
             <li>
               <LinkButton
-                to="/works"
+                to="/portfolio"
                 className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
               >
-                <SlWrench className="mr-2" />
-                Works
+                <MdOutlineGridView className="mr-2" />
+                Portfolio
               </LinkButton>
             </li>
             <li>
