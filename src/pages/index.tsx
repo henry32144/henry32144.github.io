@@ -11,6 +11,7 @@ import {
 } from "react-icons/ai";
 import { SiIndeed } from "react-icons/si";
 import resume from "../downloads/resume.pdf";
+import Seo from '../components/seo'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -55,4 +56,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home</title>;
+export const Head: HeadFC = () => <Seo title="Home" />;

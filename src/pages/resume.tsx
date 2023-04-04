@@ -6,6 +6,7 @@ import PageTitle from "../components/pageTitle";
 import Experience from "../components/experience";
 import { GiGraduateCap, GiBriefcase } from "react-icons/gi";
 import { FaAward, FaCertificate } from "react-icons/fa";
+import Seo from '../components/seo'
 
 import uciLogo from "../images/uci-logo.png";
 import thuLogo from "../images/thu-logo.png";
@@ -179,4 +180,4 @@ const ResumePage: React.FC<PageProps> = () => {
 
 export default ResumePage;
 
-export const Head: HeadFC = () => <title>Resume</title>;
+export const Head: HeadFC = () => <Seo title="Resume" />;

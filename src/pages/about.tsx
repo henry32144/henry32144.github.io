@@ -14,6 +14,7 @@ import {
   AiFillCloud,
 } from "react-icons/ai";
 import { FaServer } from "react-icons/fa";
+import Seo from '../components/seo'
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -173,4 +174,4 @@ const AboutPage: React.FC<PageProps> = () => {
 
 export default AboutPage;
 
-export const Head: HeadFC = () => <title>About</title>;
+export const Head: HeadFC = () => <Seo title="About" />;

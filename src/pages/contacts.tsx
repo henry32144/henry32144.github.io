@@ -5,6 +5,7 @@ import Card from "../components/card";
 import PageTitle from "../components/pageTitle";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
+import Seo from '../components/seo'
 
 const ContactPage: React.FC<PageProps> = () => {
   return (
@@ -72,4 +73,4 @@ const ContactPage: React.FC<PageProps> = () => {
 
 export default ContactPage;
 
-export const Head: HeadFC = () => <title>Contacts</title>;
+export const Head: HeadFC = () => <Seo title="Contacts" />;
