@@ -10,30 +10,12 @@ import { MdOutlineGridView } from "react-icons/md";
 import { RiContactsBookLine } from "react-icons/ri";
 import { TbSunMoon } from "react-icons/tb";
 
-const Navbar: React.FC = () => {
-  const [isDark, setIsDark] = React.useState(false);
+interface NavbarProps {
+  isDark: boolean;
+  setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-  React.useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setIsDark(true);
-    } else {
-      setIsDark(false);
-    }
-  }, []);
-
-  React.useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
-    }
-  }, [isDark]);
+const Navbar: React.FC<NavbarProps> = ({isDark, setIsDark}) => {
 
   return (
     <div className="container">

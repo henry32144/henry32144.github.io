@@ -2,7 +2,6 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { graphql } from "gatsby";
 
-import Layout from "../../components/layout";
 import Card from "../../components/card";
 import PageTitle from "../../components/pageTitle";
 import Seo from "../../components/seo";
@@ -29,14 +28,12 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
     console.log(data);
   }, []);
   return (
-    <Layout>
-      <Card>
-        <div className="py-12">
-          <PageTitle text="Project" />
-        </div>
-        {children}
-      </Card>
-    </Layout>
+    <Card>
+      <div className="py-12">
+        <PageTitle text="Project" />
+      </div>
+      {children}
+    </Card>
   );
 };
 

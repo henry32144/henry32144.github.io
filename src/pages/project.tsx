@@ -1,18 +1,11 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import * as React from "react";
+import type { HeadFC, PageProps } from "gatsby";
+import Seo from "../components/seo";
 
 const IndexPage: React.FC<PageProps> = () => {
-  return (
-    <Layout>
-      <h1 className="text-3xl font-bold">
-        Project!
-      </h1>
-    </Layout>
-  )
-}
+  return <h1 className="text-3xl font-bold">Project!</h1>;
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const Head: HeadFC = () => <Seo title="Project" />
+export const Head: HeadFC = () => <Seo title="Project" />;
