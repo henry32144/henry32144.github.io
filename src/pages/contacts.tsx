@@ -15,7 +15,7 @@ const ContactPage: React.FC<PageProps> = () => {
           <PageTitle text="Contact" />
         </div>
         <div className="lg:flex gap-x-10 pb-12">
-          <div className="w-full lg:w-[40%] xl:w-[30%] space-y-6">
+          <div className="w-full flex gap-4">
             <div className="flex p-8 gap-2 bg-violet-100 dark:border-dark-icon-bg rounded-xl dark:bg-neutral-700">
               <div className="mt-2">
                 <AiOutlineMail
@@ -52,7 +52,7 @@ const ContactPage: React.FC<PageProps> = () => {
               </div>
             </div>
           </div>
-          <div className="w-full mt-8 lg:mt-0 lg:w-[60%] xl:w-[70%]">
+          {/* <div className="w-full mt-8 lg:mt-0 lg:w-[60%] xl:w-[70%]">
             <div className="dark:border-dark-icon-bg dark:border-2 md:p-[48px] p-4 bg-gray-300 rounded-xl mb-[30px] md:mb-[60px] dark:bg-[#111111]">
               <h3 className="text-2xl ">
                 <span className="text-gray-lite dark:text-[#A6A6A6] ">
@@ -64,7 +64,7 @@ const ContactPage: React.FC<PageProps> = () => {
                 </span>
               </h3>
             </div>
-          </div>
+          </div> */}
         </div>
       </Card>
     </Layout>

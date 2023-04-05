@@ -39,6 +39,13 @@ const config: GatsbyConfig = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/portfolio`,
+      },
+    },
   ],
 };
 
