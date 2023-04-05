@@ -2,14 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body * {
+/* body * {
   @apply transition-colors duration-200;
+} */
+
+* {
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
 }
 
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.transition-bg-image {
+  transition: background-image 0.5s ease-in-out;
 }
 
 @media (min-width: 100%) {
