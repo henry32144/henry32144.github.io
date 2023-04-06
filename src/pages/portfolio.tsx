@@ -1,10 +1,12 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { graphql } from "gatsby";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 import Card from "../components/card";
 import PageTitle from "../components/pageTitle";
 import Seo from "../components/seo";
+import ProjectCard from "../components/projectCard";
 import tempImage from "../images/background.jpg";
 import { withSize } from "react-sizeme";
 import StackGrid from "react-stack-grid";
@@ -28,6 +30,14 @@ type PortfolioPageProps = PageProps & {
             link: string;
             code: string;
             skills: string;
+            hero_image_alt: string;
+            hero_image_credit_link: string;
+            hero_image_credit_text: string;
+            hero_image: {
+              childImageSharp: {
+                gatsbyImageData: IGatsbyImageData;
+              };
+            };
           };
           id: string;
         }
@@ -49,7 +59,6 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
   const { nodes } = data.allMdx;
 
   const responsiveWidth = ({ size }: ResponsiveWidthParams): string => {
-    console.log(size);
     // lg
     if (size.width >= 1024) {
       return "33.33%";
@@ -80,23 +89,13 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
       <div className="py-12">
         <StackGrid columnWidth={responsiveWidthValue}>
           {nodes.map((item) => (
-            <div
+            <ProjectCard
               key={item.id}
-              className="rounded-lg p-6 dark:border-[2px] border-[#212425] dark:bg-transparent bg-sky-200 cursor-pointer transition duration-200 ease-in-out transform hover:scale-105"
-            >
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={tempImage}
-                  className="w-full rounded-lg h-auto "
-                ></img>
-              </div>
-              <span className="pt-5 text-[14px] font-normal text-gray-500 block dark:text-[#A6A6A6]">
-                Test
-              </span>
-              <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-white mt-2">
-                Project Title
-              </h2>
-            </div>
+              title={item.frontmatter.title}
+              category={item.frontmatter.category}
+              image={item.frontmatter.hero_image}
+              imageAlt={item.frontmatter.hero_image_alt}
+            />
           ))}
         </StackGrid>
       </div>
@@ -113,6 +112,15 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM, YYYY")
           title
+          category
+          hero_image_alt
+          hero_image_credit_link
+          hero_image_credit_text
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
       }
