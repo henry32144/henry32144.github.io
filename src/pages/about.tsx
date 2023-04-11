@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Card from "../components/card";
-import PersonalInfoCard from "../components/personalInfoCard";
+import InfoCard from "../components/infoCard";
 import WhatIDoCard from "../components/whatIDoCard";
 import PageTitle from "../components/pageTitle";
 import tempImage from "../images/background.jpg";
@@ -50,7 +50,7 @@ const AboutPage: React.FC<PageProps> = () => {
               </h2>
               <div className="grid grid-cols-12 gap-6">
                 <div className="flex col-span-12 sm:col-span-6">
-                  <PersonalInfoCard
+                  <InfoCard
                     icon={
                       <span className="p-1 text-[#2d64bc] dark:bg-dark-icon-bg mr-2.5 shadow-md flex items-center justify-center rounded-md w-12 h-12">
                         <AiFillLinkedin size={26} />
@@ -70,7 +70,7 @@ const AboutPage: React.FC<PageProps> = () => {
                   />
                 </div>
                 <div className="flex col-span-12 sm:col-span-6">
-                  <PersonalInfoCard
+                  <InfoCard
                     icon={
                       <span className="p-1 text-rose-600 dark:text-rose-600 shadow-md dark:bg-dark-icon-bg mr-2.5 flex items-center justify-center rounded-md w-12 h-12">
                         <MdLocationPin size={26} />
@@ -81,7 +81,7 @@ const AboutPage: React.FC<PageProps> = () => {
                   />
                 </div>
                 <div className="flex col-span-12 sm:col-span-6">
-                  <PersonalInfoCard
+                  <InfoCard
                     icon={
                       <span className="p-1 text-emerald-500 dark:text-emerald-600 shadow-md dark:bg-dark-icon-bg mr-2.5 flex items-center justify-center rounded-md w-12 h-12">
                         <MdEmail size={26} />
@@ -99,7 +99,7 @@ const AboutPage: React.FC<PageProps> = () => {
                   />
                 </div>
                 <div className="flex col-span-12 sm:col-span-6">
-                  <PersonalInfoCard
+                  <InfoCard
                     icon={
                       <span className="p-1 text-purple-600 dark:text-purple-600 shadow-md dark:bg-dark-icon-bg mr-2.5 flex items-center justify-center rounded-md w-12 h-12">
                         <AiFillCalendar size={26} />

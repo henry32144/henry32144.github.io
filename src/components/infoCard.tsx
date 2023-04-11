@@ -2,13 +2,13 @@
 import React from "react";
 
 // Define the component
-type PersonalInfoCardProps = {
+type InfoCardProps = {
   icon: React.ReactNode;
   label: string;
   content: string | React.ReactNode;
 };
 
-const PersonalInfoCard: React.FC<PersonalInfoCardProps> = ({
+const InfoCard: React.FC<InfoCardProps> = ({
   icon,
   label,
   content,
@@ -25,4 +25,4 @@ const PersonalInfoCard: React.FC<PersonalInfoCardProps> = ({
 };
 
 // Export the component
-export default PersonalInfoCard;
+export default InfoCard;
