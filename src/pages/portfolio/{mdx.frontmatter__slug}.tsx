@@ -66,7 +66,7 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
       <div className="pb-4 inline-flex items-center">
         <MdOutlineArrowBack className="text-neutral-400" />
         <Link
-          className="ml-1 text-md font-medium text-neutral-400 dark:text-white"
+          className="ml-1 text-md font-medium text-neutral-400"
           to="/portfolio"
         >
           Back to Portfolio
