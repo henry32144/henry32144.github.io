@@ -8,7 +8,7 @@
 
 * {
   transition-property: color, background-color;
-  transition-duration: 0.5s;
+  transition-duration: 0.1s;
 }
 
 .container {
@@ -18,7 +18,7 @@
 }
 
 .transition-bg-image {
-  transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
 }
 
 @media (min-width: 100%) {

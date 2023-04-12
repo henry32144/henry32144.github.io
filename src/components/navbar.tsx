@@ -15,7 +15,9 @@ interface NavbarProps {
   setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Navbar: React.FC<NavbarProps> = ({isDark, setIsDark}) => {
+const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
+
+  const url = typeof window !== "undefined" ? window.location?.pathname : "";
 
   return (
     <div className="container">
@@ -41,6 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({isDark, setIsDark}) => {
             <li className="mb-1">
               <LinkButton
                 to="/about"
+                active={url.includes("about")}
                 className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
               >
                 <AiOutlineUser className="mr-2" />
@@ -50,6 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({isDark, setIsDark}) => {
             <li>
               <LinkButton
                 to="/resume"
+                active={url.includes("resume")}
                 className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
               >
                 <BsFileText className="mr-2" />
@@ -59,6 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({isDark, setIsDark}) => {
             <li>
               <LinkButton
                 to="/portfolio"
+                active={url.includes("portfolio")}
                 className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
               >
                 <MdOutlineGridView className="mr-2" />
@@ -68,6 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({isDark, setIsDark}) => {
             <li>
               <LinkButton
                 to="/contacts"
+                active={url.includes("contacts")}
                 className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
               >
                 <RiContactsBookLine className="mr-2" />

@@ -29,23 +29,17 @@ const ResumePage: React.FC<PageProps> = () => {
   const [japaneseProgress, setJapaneseProgress] = React.useState(0);
 
   React.useEffect(() => {
-    const timeout1 = setTimeout(() => {
+    setTimeout(() => {
       setChineseProgress(100);
     }, 300);
-    const timeout2 = setTimeout(() => {
+    setTimeout(() => {
       setEnglishProgress(85);
     }, 400);
-    const timeout3 = setTimeout(() => {
+    setTimeout(() => {
       setJapaneseProgress(60);
     }, 500);
-
-    return () => {
-      clearTimeout(timeout1);
-      clearTimeout(timeout2);
-      clearTimeout(timeout3);
-    };
   }, []);
-  
+
   return (
     <Card>
       <div className="py-12">
@@ -143,11 +137,7 @@ const ResumePage: React.FC<PageProps> = () => {
                     Native
                   </span>
                 </div>
-                <Line
-                  percent={chineseProgress}
-                  strokeColor="rgb(168 85 247)"
-                  style={{ transition: "1s ease", transitionDelay: "0.5s" }}
-                />
+                <Line percent={chineseProgress} strokeColor="rgb(168 85 247)" />
               </div>
               <div className="mb-7">
                 <div className="flex justify-between py-1">
