@@ -93,6 +93,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
             columnWidth={responsiveWidthValue}
             monitorImagesLoaded={true}
             gutterWidth={24}
+            gutterHeight={24}
           >
             {nodes.map((item) => (
               <ProjectCard

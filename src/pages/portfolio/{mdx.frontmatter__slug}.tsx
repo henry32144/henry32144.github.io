@@ -63,13 +63,10 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
       <div className="py-12">
         <PageTitle text="Project" />
       </div>
-      <div className="pb-4 inline-flex items-center">
-        <MdOutlineArrowBack className="text-neutral-400" />
-        <Link
-          className="ml-1 text-md font-medium text-neutral-400"
-          to="/portfolio"
-        >
-          Back to Portfolio
+      <div className="pb-4 inline-flex">
+        <Link className="text-md font-medium text-neutral-400 inline-flex items-center" to="/portfolio">
+          <MdOutlineArrowBack className="text-neutral-400" />
+          <span className="ml-1">Back to Portfolio</span>
         </Link>
       </div>
       <div className="pb-4">

@@ -16,13 +16,13 @@ const Layout: React.FC<LayoutProps> = ({ children, isDark, setIsDark }) => {
   //   enter: { opacity: 1 },
   //   leave: { opacity: 0 },
   // });
-  const transitions = useTransition(children, {
-    config: { duration: 100 },
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-    exitBeforeEnter: true,
-  });
+  // const transitions = useTransition(children, {
+  //   config: { duration: 100 },
+  //   from: { opacity: 0 },
+  //   enter: { opacity: 1 },
+  //   leave: { opacity: 0 },
+  //   exitBeforeEnter: true,
+  // });
 
   React.useEffect(() => {
     if (isDark) {
