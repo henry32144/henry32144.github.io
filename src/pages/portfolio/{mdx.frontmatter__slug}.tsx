@@ -214,6 +214,4 @@ type HeadProps = {
   data: ProjectPageProps["data"];
 };
 
-const Head: HeadFC<HeadProps> = ({ data }) => (
-  <Seo title={data.mdx.frontmatter.title} />
-);
+export const Head: HeadFC<HeadProps> = ({data}) => <Seo title={data.mdx.frontmatter.title} />;
