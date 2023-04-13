@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
   const [showMenu, setShowMenu] = React.useState(false);
 
   return (
-    <div className="container">
+    <div className="lg:container lg:mx-auto">
       <header className="flex justify-between items-center top-0 left-0 w-full fixed lg:static z-[100]">
         <div className="flex justify-between w-full px-4 lg:px-0 bg-slate-50 lg:bg-transparent lg:dark:bg-transparent dark:bg-black">
           <div className="flex justify-between w-full items-center space-x-4 lg-my-8 my-5">
@@ -87,7 +87,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/about"
                 active={url.includes("about")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                onClick={() => setShowMenu(false)}
               >
                 <AiOutlineUser className="mr-2" />
                 About
@@ -97,7 +98,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/resume"
                 active={url.includes("resume")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                onClick={() => setShowMenu(false)}
               >
                 <BsFileText className="mr-2" />
                 Resume
@@ -107,7 +109,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/portfolio"
                 active={url.includes("portfolio")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                onClick={() => setShowMenu(false)}
               >
                 <MdOutlineGridView className="mr-2" />
                 Portfolio
@@ -117,7 +120,8 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/contacts"
                 active={url.includes("contacts")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                onClick={() => setShowMenu(false)}
               >
                 <RiContactsBookLine className="mr-2" />
                 Contact

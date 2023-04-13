@@ -11,14 +11,14 @@
   transition-duration: 0.1s;
 }
 
+.transition-bg-image {
+  transition: background-image 0.3s ease-in-out;
+}
+
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-}
-
-.transition-bg-image {
-  transition: background-image 0.3s ease-in-out;
 }
 
 @media (min-width: 100%) {

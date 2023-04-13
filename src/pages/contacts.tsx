@@ -14,8 +14,8 @@ const ContactPage: React.FC<PageProps> = () => {
         <PageTitle text="Contact" />
       </div>
       <div className="lg:flex gap-x-10 pb-12">
-        <div className="w-full flex gap-4">
-          <div className="flex p-8 gap-2 bg-violet-100 dark:border-dark-icon-bg rounded-xl dark:bg-neutral-700">
+        <div className="grid  grid-cols-12 gap-4">
+          <div className="col-span-12 md:col-span-6 flex p-8 gap-2 bg-violet-100 dark:border-dark-icon-bg rounded-xl dark:bg-neutral-700">
             <div className="mt-2">
               <AiOutlineMail
                 size={26}
@@ -34,7 +34,7 @@ const ContactPage: React.FC<PageProps> = () => {
               </div>
             </div>
           </div>
-          <div className="flex p-8 gap-2 bg-rose-100 dark:border-dark-icon-bg rounded-xl dark:bg-neutral-700">
+          <div className="col-span-12 md:col-span-6 flex p-8 gap-2 bg-rose-100 dark:border-dark-icon-bg rounded-xl dark:bg-neutral-700">
             <div className="mt-2">
               <MdLocationOn
                 size={26}

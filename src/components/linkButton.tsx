@@ -8,6 +8,7 @@ interface LinkButtonProps {
   className?: string;
   children?: React.ReactNode;
   active?: boolean;
+  onClick?: () => void;
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({
@@ -16,6 +17,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   className,
   target,
   active = false,
+  onClick,
 }) => {
   return (
     <Link
@@ -38,6 +40,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
             )
       }
       target={target}
+      onClick={onClick}
     >
       {children}
     </Link>

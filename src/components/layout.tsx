@@ -50,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ({ children, isDark, setIsDark }) => {
     // </div>
     <div className="transition-bg-image bg-bgImage dark:bg-darkBgImage bg-cover bg-fixed bg-center bg-no-repeat min-h-screen md:pb-16">
       <Navbar isDark={isDark} setIsDark={setIsDark} />
-      <div className="container">
+      <div>
         {children}
         <Footer></Footer>
       </div>
