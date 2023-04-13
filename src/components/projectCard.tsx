@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <span className="pt-5 text-[14px] font-normal text-gray-500 block dark:text-[#A6A6A6]">
         {category}
       </span>
-      <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-white mt-2">
+      <h2 className="font-semibold cursor-pointer text-xl duration-300 transition hover:text-indigo-500 dark:hover:text-indigo-500 dark:text-white mt-2">
         {title}
       </h2>
     </div>

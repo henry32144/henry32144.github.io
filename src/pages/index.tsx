@@ -19,7 +19,9 @@ const IndexPage: React.FC<PageProps> = () => {
       <h1 className="mt-6 mb-2 text-3xl font-semibold dark:text-white">
         Cheng-Han Wu
       </h1>
-      <h2 className="mb-4 text-lg text-gray-500">Software Engineer</h2>
+      <h2 className="mb-4 text-lg text-gray-500 dark:text-gray-200">
+        Software Engineer
+      </h2>
       <div className="flex gap-3 mb-6">
         <SnsButton
           className="text-[#2d64bc] w-[40px] h-[40px] justify-center items-center rounded-lg"
@@ -38,9 +40,11 @@ const IndexPage: React.FC<PageProps> = () => {
         />
       </div>
       <a
-        className="flex justify-center items-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-500 \
-            duration-200 transition ease-linear hover:bg-gradient-to-l from-violet-500 to-indigo-500 \
-            px-8 py-3 text-lg text-white rounded-[35px]"
+        className={
+          "flex justify-center items-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-500 duration-200 transition ease-linear \
+            px-8 py-3 text-lg text-white rounded-[35px]" +
+          " hover:bg-gradient-to-l from-violet-600 to-indigo-600"
+        }
         href={resume}
         download
       >

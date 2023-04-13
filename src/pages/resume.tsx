@@ -297,20 +297,20 @@ const ResumePage: React.FC<PageProps> = () => {
                 bgColor="bg-emerald-50"
               />
               <Experience
-                title="Japanese Language Proficiency Test N1"
+                title="Japanese Language Proficiency Test: N1"
                 date="2021 Jan"
                 institution="Japan Foundation and Japan Educational Exchanges and
                     Services"
                 bgColor="bg-emerald-50"
               />
               <Experience
-                title="TOEFL iBT 106"
+                title="TOEFL iBT: 106"
                 date="2019 Oct"
                 institution="ETS"
                 bgColor="bg-emerald-50"
               />
               <Experience
-                title="GRE 326"
+                title="GRE: 326"
                 date="2019 Aug"
                 institution="ETS"
                 bgColor="bg-emerald-50"

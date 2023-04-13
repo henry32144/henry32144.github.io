@@ -5,6 +5,7 @@ import PageTitle from "../components/pageTitle";
 import { AiOutlineMail } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import Seo from "../components/seo";
+import tempImage from "../images/sky.jpg";
 
 const ContactPage: React.FC<PageProps> = () => {
   return (
@@ -63,6 +64,17 @@ const ContactPage: React.FC<PageProps> = () => {
               </h3>
             </div>
           </div> */}
+      </div>
+      <div className="pb-12">
+        <img
+          loading="lazy"
+          alt="Beautiful sky photo in LA"
+          className="w-full object-cover overflow-hidden rounded-xl mb-3 md:mb-0"
+          src={tempImage}
+        ></img>
+        <div className="footer py-1 text-center text-gray-500">
+          <p>Beautiful sky in South california!</p>
+        </div>
       </div>
     </Card>
   );

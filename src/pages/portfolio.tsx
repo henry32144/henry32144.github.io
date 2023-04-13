@@ -1,6 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import { graphql } from "gatsby";
+import classNames from "classnames";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 import Card from "../components/card";
@@ -53,6 +54,7 @@ type ResponsiveWidthParams = {
 };
 
 const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
+  const [currentCategory, setCurrentCategory] = React.useState("All");
   React.useEffect(() => {
     console.log(data);
   }, []);
@@ -80,12 +82,47 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
       <div className="py-12">
         <PageTitle text="Portfolio" />
       </div>
-      <ul className="flex w-full justify-start md:justify-end flex-wrap font-medium pb-12 text-gray-500">
-        <li className="mr-4 md:mx-4 cursor-pointer">All</li>
-        <li className="mr-4 md:mx-4 cursor-pointer">Web</li>
-        <li className="mr-4 md:mx-4 cursor-pointer">ML/AI</li>
-        <li className="mr-4 md:mx-4 cursor-pointer">App</li>
-        <li className="mr-4 md:mx-4 cursor-pointer">Game</li>
+      <ul className="flex w-full justify-start md:justify-end flex-wrap font-semibold pb-12 text-gray-500 dark:text-gray-200">
+        <li
+          className={classNames("mr-4 md:mx-4 cursor-pointer", {
+            "text-indigo-500": currentCategory === "All",
+          })}
+          onClick={() => setCurrentCategory("All")}
+        >
+          All
+        </li>
+        <li
+          className={classNames("mr-4 md:mx-4 cursor-pointer", {
+            "text-indigo-500": currentCategory === "Web",
+          })}
+          onClick={() => setCurrentCategory("Web")}
+        >
+          Web
+        </li>
+        <li
+          className={classNames("mr-4 md:mx-4 cursor-pointer", {
+            "text-indigo-500": currentCategory === "AI/ML",
+          })}
+          onClick={() => setCurrentCategory("AI/ML")}
+        >
+          AI/ML
+        </li>
+        <li
+          className={classNames("mr-4 md:mx-4 cursor-pointer", {
+            "text-indigo-500": currentCategory === "App",
+          })}
+          onClick={() => setCurrentCategory("App")}
+        >
+          App
+        </li>
+        <li
+          className={classNames("mr-4 md:mx-4 cursor-pointer", {
+            "text-indigo-500": currentCategory === "Game",
+          })}
+          onClick={() => setCurrentCategory("Game")}
+        >
+          Game
+        </li>
       </ul>
       <div className="pb-12 relative">
         {nodes && (
@@ -95,17 +132,24 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
             gutterWidth={24}
             gutterHeight={24}
           >
-            {nodes.map((item) => (
-              <ProjectCard
-                key={item.id}
-                title={item.frontmatter.title}
-                category={item.frontmatter.category}
-                className={item.frontmatter.bgColor}
-                image={item.frontmatter.thumbnail}
-                imageAlt={item.frontmatter.hero_image_alt}
-                slug={item.frontmatter.slug}
-              />
-            ))}
+            {nodes &&
+              nodes
+                .filter(
+                  (item) =>
+                    item.frontmatter.category === currentCategory ||
+                    currentCategory === "All"
+                )
+                .map((item) => (
+                  <ProjectCard
+                    key={item.id}
+                    title={item.frontmatter.title}
+                    category={item.frontmatter.category}
+                    className={item.frontmatter.bgColor}
+                    image={item.frontmatter.thumbnail}
+                    imageAlt={item.frontmatter.hero_image_alt}
+                    slug={item.frontmatter.slug}
+                  />
+                ))}
           </StackGrid>
         )}
       </div>

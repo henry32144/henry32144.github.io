@@ -4,7 +4,7 @@ import Card from "../components/card";
 import InfoCard from "../components/infoCard";
 import WhatIDoCard from "../components/whatIDoCard";
 import PageTitle from "../components/pageTitle";
-import tempImage from "../images/background.jpg";
+import aboutMeImage from "../images/snow.jpg";
 import { MdEmail, MdLocationPin, MdWeb } from "react-icons/md";
 import {
   AiFillLinkedin,
@@ -25,7 +25,7 @@ const AboutPage: React.FC<PageProps> = () => {
             <img
               loading="lazy"
               className="w-full md:w-[330px] md:h-[400px] object-cover overflow-hidden rounded-[35px] mb-3 md:mb-0"
-              src={tempImage}
+              src={aboutMeImage}
             ></img>
           </div>
           <div className="col-span-12 md:col-span-8 space-y-2.5">
