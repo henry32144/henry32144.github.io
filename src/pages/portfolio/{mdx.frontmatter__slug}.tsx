@@ -79,7 +79,7 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
       </div>
       <div className="pb-4">
         <div className="grid grid-cols-12 gap-4">
-          <div className="flex col-span-12 sm:col-span-6 lg:col-span-4">
+          <div className="flex col-span-12 sm:col-span-6">
             <InfoCard
               icon={
                 <span className="p-1 text-[#2d64bc] dark:bg-dark-icon-bg mr-2.5 shadow-md flex items-center justify-center rounded-md w-12 h-12">
@@ -90,18 +90,7 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
               content={data.mdx.frontmatter.category}
             />
           </div>
-          <div className="flex col-span-12 sm:col-span-6 lg:col-span-4">
-            <InfoCard
-              icon={
-                <span className="p-1 text-rose-600 dark:text-rose-600 mr-2.5 shadow-md flex items-center justify-center rounded-md w-12 h-12">
-                  <MdOutlineCode size={26} />
-                </span>
-              }
-              label="Skills"
-              content={data.mdx.frontmatter.skills}
-            />
-          </div>
-          <div className="flex col-span-12 sm:col-span-6 lg:col-span-4">
+          <div className="flex col-span-12 sm:col-span-6">
             <InfoCard
               icon={
                 <span className="p-1 text-emerald-500 dark:text-emerald-600 mr-2.5 shadow-md flex items-center justify-center rounded-md w-12 h-12">
@@ -112,7 +101,7 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
               content={data.mdx.frontmatter.teamMembers}
             />
           </div>
-          <div className="flex col-span-12 sm:col-span-6 lg:col-span-4">
+          <div className="flex col-span-12 sm:col-span-6">
             <InfoCard
               icon={
                 <span className="p-1 text-purple-600 dark:text-purple-600 mr-2.5 shadow-md flex items-center justify-center rounded-md w-12 h-12">
@@ -124,7 +113,7 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
             />
           </div>
           {data.mdx.frontmatter.link && (
-            <div className="flex col-span-12 sm:col-span-6 lg:col-span-4">
+            <div className="flex col-span-12 sm:col-span-6">
               <InfoCard
                 icon={
                   <span className="p-1 text-amber-600 dark:text-amber-600 mr-2.5 shadow-md flex items-center justify-center rounded-md w-12 h-12">
@@ -167,6 +156,17 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
               />
             </div>
           )}
+          <div className="flex col-span-12">
+            <InfoCard
+              icon={
+                <span className="p-1 text-rose-600 dark:text-rose-600 mr-2.5 shadow-md flex items-center justify-center rounded-md w-12 h-12">
+                  <MdOutlineCode size={26} />
+                </span>
+              }
+              label="Skills"
+              content={data.mdx.frontmatter.skills}
+            />
+          </div>
         </div>
       </div>
       <div className="pb-4">

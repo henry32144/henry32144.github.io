@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import { graphql  } from "gatsby";
+import { graphql } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 import Card from "../components/card";
@@ -30,6 +30,7 @@ type PortfolioPageProps = PageProps & {
             link: string;
             code: string;
             skills: string;
+            bgColor: string;
             hero_image_alt: string;
             hero_image_credit_link: string;
             hero_image_credit_text: string;
@@ -87,19 +88,25 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
         <li className="mr-4 md:mx-4 cursor-pointer">Game</li>
       </ul>
       <div className="pb-12 relative">
-        {nodes && <StackGrid columnWidth={responsiveWidthValue} monitorImagesLoaded={true}>
-          {nodes.map((item) => (
-            <ProjectCard
-              key={item.id}
-              title={item.frontmatter.title}
-              category={item.frontmatter.category}
-              cardBgColor={"bg-pink-200"}
-              image={item.frontmatter.thumbnail}
-              imageAlt={item.frontmatter.hero_image_alt}
-              slug={item.frontmatter.slug}
-            />
-          ))}
-        </StackGrid>}
+        {nodes && (
+          <StackGrid
+            columnWidth={responsiveWidthValue}
+            monitorImagesLoaded={true}
+            gutterWidth={24}
+          >
+            {nodes.map((item) => (
+              <ProjectCard
+                key={item.id}
+                title={item.frontmatter.title}
+                category={item.frontmatter.category}
+                className={item.frontmatter.bgColor}
+                image={item.frontmatter.thumbnail}
+                imageAlt={item.frontmatter.hero_image_alt}
+                slug={item.frontmatter.slug}
+              />
+            ))}
+          </StackGrid>
+        )}
       </div>
     </Card>
   );
@@ -116,6 +123,7 @@ export const query = graphql`
           title
           category
           slug
+          bgColor
           hero_image_alt
           hero_image_credit_link
           hero_image_credit_text
