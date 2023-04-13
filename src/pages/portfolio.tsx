@@ -55,9 +55,6 @@ type ResponsiveWidthParams = {
 
 const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
   const [currentCategory, setCurrentCategory] = React.useState("All");
-  React.useEffect(() => {
-    console.log(data);
-  }, []);
 
   const { nodes } = data.allMdx;
 
@@ -79,10 +76,10 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
 
   return (
     <Card>
-      <div className="py-12">
+      <div className="py-12 px-4">
         <PageTitle text="Portfolio" />
       </div>
-      <ul className="flex w-full justify-start md:justify-end flex-wrap font-semibold pb-12 text-gray-500 dark:text-gray-200">
+      <ul className="flex w-full justify-start md:justify-end flex-wrap font-semibold pb-12 text-gray-500 dark:text-gray-200 px-4">
         <li
           className={classNames("mr-4 md:mx-4 cursor-pointer", {
             "text-indigo-500": currentCategory === "All",
@@ -124,7 +121,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ data, size }) => {
           Game
         </li>
       </ul>
-      <div className="pb-12 relative">
+      <div className="pb-12 relative px-4">
         {nodes && (
           <StackGrid
             columnWidth={responsiveWidthValue}

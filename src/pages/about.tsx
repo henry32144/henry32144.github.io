@@ -18,7 +18,7 @@ import Seo from "../components/seo";
 const AboutPage: React.FC<PageProps> = () => {
   return (
     <Card>
-      <div className="py-12">
+      <div className="py-12 px-4">
         <PageTitle text="About Me" />
         <div className="grid grid-cols-12 md:gap-10 pt-4 md:pt-[40px] items-center">
           <div className="col-span-12 md:col-span-4">
@@ -114,7 +114,7 @@ const AboutPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </div>
-      <div className="pb-12">
+      <div className="pb-12 px-4">
         <h3 className="dark:text-white relative inline-block text-3xl font-semibold pb-5">
           What I do
         </h3>

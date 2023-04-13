@@ -42,11 +42,11 @@ const ResumePage: React.FC<PageProps> = () => {
 
   return (
     <Card>
-      <div className="py-12">
+      <div className="py-12 px-4">
         <PageTitle text="Resume" />
       </div>
-      <div className="pb-12">
-        <div className="grid grid-cols-12 gap-8">
+      <div className="pb-12 px-4">
+        <div className="grid grid-cols-12 gap-y-4 md:gap-8">
           <div className="col-span-12 md:col-span-6">
             <h3 className="dark:text-white relative inline-block text-3xl font-semibold pb-5">
               Skills
@@ -171,8 +171,8 @@ const ResumePage: React.FC<PageProps> = () => {
           </div>
         </div>
       </div>
-      <div className="pb-12">
-        <div className="grid grid-cols-12 gap-8">
+      <div className="pb-12 px-4">
+        <div className="grid grid-cols-12 gap-y-4 md:gap-8">
           <div className="col-span-12 md:col-span-6">
             <div className="flex items-center space-x-3 mb-4">
               <GiGraduateCap className="text-indigo-500" size={30} />

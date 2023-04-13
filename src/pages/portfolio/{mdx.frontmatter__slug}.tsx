@@ -44,9 +44,6 @@ type ProjectPageProps = PageProps & {
 };
 
 const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
-  React.useEffect(() => {
-    console.log(data);
-  }, []);
 
   const imageData = getImage(data.mdx.frontmatter.hero_image);
 
@@ -60,21 +57,21 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
 
   return (
     <Card>
-      <div className="py-12">
+      <div className="py-12 px-4">
         <PageTitle text="Project" />
       </div>
-      <div className="pb-4 inline-flex">
+      <div className="pb-4 inline-flex px-4">
         <Link className="text-md font-medium text-neutral-400 inline-flex items-center" to="/portfolio">
           <MdOutlineArrowBack className="text-neutral-400" />
           <span className="ml-1">Back to Portfolio</span>
         </Link>
       </div>
-      <div className="pb-4">
+      <div className="pb-4 px-4">
         <h4 className="text-2xl font-medium mb-2.5 dark:text-white">
           {data.mdx.frontmatter.title}
         </h4>
       </div>
-      <div className="pb-4">
+      <div className="pb-4 px-4">
         <div className="grid grid-cols-12 gap-4">
           <div className="flex col-span-12 sm:col-span-6">
             <InfoCard
@@ -166,12 +163,12 @@ const Project: React.FC<ProjectPageProps> = ({ data, children }) => {
           </div>
         </div>
       </div>
-      <div className="pb-4">
+      <div className="pb-4 px-4">
         <p className="text-gray-500 text-lg dark:text-gray-400 leading-7">
           {data.mdx.frontmatter.description}
         </p>
       </div>
-      <div className="overflow-hidden rounded-lg pb-12">
+      <div className="overflow-hidden rounded-lg pb-12 px-4">
         {imageData && (
           <GatsbyImage
             className="w-full rounded-lg h-auto"

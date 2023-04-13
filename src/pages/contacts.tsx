@@ -10,10 +10,10 @@ import tempImage from "../images/sky.jpg";
 const ContactPage: React.FC<PageProps> = () => {
   return (
     <Card>
-      <div className="py-12">
+      <div className="py-12 px-4">
         <PageTitle text="Contact" />
       </div>
-      <div className="lg:flex gap-x-10 pb-12">
+      <div className="lg:flex gap-x-10 pb-12 px-4">
         <div className="grid  grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-6 flex p-8 gap-2 bg-violet-100 dark:border-dark-icon-bg rounded-xl dark:bg-neutral-700">
             <div className="mt-2">
@@ -65,7 +65,7 @@ const ContactPage: React.FC<PageProps> = () => {
             </div>
           </div> */}
       </div>
-      <div className="pb-12">
+      <div className="pb-12 px-4">
         <img
           loading="lazy"
           alt="Beautiful sky photo in LA"
