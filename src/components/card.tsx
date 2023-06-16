@@ -10,7 +10,7 @@ const Card: React.FC<NavButtonProps> = ({ className, children }) => {
   return (
     <div
       className={classNames(
-        "lg:container lg:mx-auto lg:rounded-2xl bg-white dark:bg-[#111111] sm:px-5 md:px-10 lg:px-20",
+        "lg:container lg:mx-auto lg:rounded-2xl bg-white dark:bg-[#111111] sm:px-5 md:px-10 lg:px-20 shadow-2xl",
         className
       )}
     >

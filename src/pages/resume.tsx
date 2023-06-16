@@ -28,7 +28,7 @@ const ResumePage: React.FC<PageProps> = () => {
   const [englishProgress, setEnglishProgress] = React.useState(0);
   const [japaneseProgress, setJapaneseProgress] = React.useState(0);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     setTimeout(() => {
       setChineseProgress(100);
     }, 300);
@@ -221,7 +221,7 @@ const ResumePage: React.FC<PageProps> = () => {
             <div className="flex flex-col gap-4">
               <Experience
                 title="Software Engineering Intern"
-                date="2022 Jun - 2022 Dec, 7 months"
+                date="2022 Jun - 2023 May, 11 months"
                 institution="MyCareLinq Inc, USA"
                 logo={MCLLogo}
                 bgColor="bg-orange-50"
@@ -291,6 +291,12 @@ const ResumePage: React.FC<PageProps> = () => {
             </div>
             <div className="flex flex-col gap-4">
               <Experience
+                title="AWS Certified Solutions Architect - Associate"
+                date="2023 Jun"
+                institution="Amazon Web Services"
+                bgColor="bg-emerald-50"
+              />
+              <Experience
                 title="AWS Certified Cloud Practitioner"
                 date="2022 Dec"
                 institution="Amazon Web Services"
@@ -306,12 +312,6 @@ const ResumePage: React.FC<PageProps> = () => {
               <Experience
                 title="TOEFL iBT: 106"
                 date="2019 Oct"
-                institution="ETS"
-                bgColor="bg-emerald-50"
-              />
-              <Experience
-                title="GRE: 326"
-                date="2019 Aug"
                 institution="ETS"
                 bgColor="bg-emerald-50"
               />

@@ -16,6 +16,9 @@ interface NavbarProps {
   setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+const linkButtonStyle = "rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5 shadow-lg"
+const smLinkButtonStyle = "rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5 "
+
 const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
   const url = typeof window !== "undefined" ? window.location?.pathname : "";
   const [showMenu, setShowMenu] = React.useState(false);
@@ -47,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               items-center 
               text-black 
               hover:bg-indigo-500
-              transition-all duration-300 ease-in-out cursor-pointer ml-2"
+              transition-all duration-300 ease-in-out cursor-pointer ml-2 shadow-lg"
                 onClick={() => setIsDark(!isDark)}
               >
                 <TbSunMoon />
@@ -62,7 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               items-center 
               text-black 
               hover:bg-indigo-500
-              transition-all duration-300 ease-in-out cursor-pointer ml-2"
+              transition-all duration-300 ease-in-out cursor-pointer ml-2 shadow-lg"
                 onClick={() => setShowMenu(!showMenu)}
               >
                 {showMenu ? <MdOutlineClose /> : <MdMenu />}
@@ -87,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/about"
                 active={url.includes("about")}
-                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                className={smLinkButtonStyle}
                 onClick={() => setShowMenu(false)}
               >
                 <AiOutlineUser className="mr-2" />
@@ -98,7 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/resume"
                 active={url.includes("resume")}
-                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                className={smLinkButtonStyle}
                 onClick={() => setShowMenu(false)}
               >
                 <BsFileText className="mr-2" />
@@ -109,7 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/portfolio"
                 active={url.includes("portfolio")}
-                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                className={smLinkButtonStyle}
                 onClick={() => setShowMenu(false)}
               >
                 <MdOutlineGridView className="mr-2" />
@@ -120,7 +123,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/contacts"
                 active={url.includes("contacts")}
-                className="rounded-md mx-2.5 px-2 py-4 md:px-4 xl:px-5"
+                className={smLinkButtonStyle}
                 onClick={() => setShowMenu(false)}
               >
                 <RiContactsBookLine className="mr-2" />
@@ -136,7 +139,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
             items-center 
             text-black 
             hover:bg-indigo-500
-            transition-all duration-300 ease-in-out cursor-pointer ml-2"
+            transition-all duration-300 ease-in-out cursor-pointer ml-2 shadow-lg"
               onClick={() => setIsDark(!isDark)}
             >
               <TbSunMoon />
@@ -149,7 +152,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/about"
                 active={url.includes("about")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className={linkButtonStyle}
               >
                 <AiOutlineUser className="mr-2" />
                 About
@@ -159,7 +162,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/resume"
                 active={url.includes("resume")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className={linkButtonStyle}
               >
                 <BsFileText className="mr-2" />
                 Resume
@@ -169,7 +172,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/portfolio"
                 active={url.includes("portfolio")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className={linkButtonStyle}
               >
                 <MdOutlineGridView className="mr-2" />
                 Portfolio
@@ -179,7 +182,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
               <LinkButton
                 to="/contacts"
                 active={url.includes("contacts")}
-                className="rounded-md mx-2.5 px-2 py-2.5 md:px-4 xl:px-5"
+                className={linkButtonStyle}
               >
                 <RiContactsBookLine className="mr-2" />
                 Contact
@@ -194,7 +197,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, setIsDark }) => {
             items-center 
             text-black 
             hover:bg-indigo-500
-            transition-all duration-300 ease-in-out cursor-pointer ml-2"
+            transition-all duration-300 ease-in-out cursor-pointer ml-2 shadow-lg"
               onClick={() => setIsDark(!isDark)}
             >
               <TbSunMoon />
